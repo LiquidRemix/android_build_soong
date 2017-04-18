@@ -97,6 +97,7 @@ var BannerVars = []string{
 	"TARGET_2ND_ARCH",
 	"TARGET_2ND_ARCH_VARIANT",
 	"TARGET_2ND_CPU_VARIANT",
+        "TARGET_USE_SDCLANG",
 }
 
 func Banner(make_vars map[string]string) string {
