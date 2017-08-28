@@ -34,7 +34,7 @@ import (
 
 // We default to number of cpus.
 func detectNumJobs() int {
-	return runtime.NumCPU()
+	return (runtime.NumCPU() - 1)
 }
 
 var numJobs = flag.Int("j", detectNumJobs(), "number of parallel kati jobs")
