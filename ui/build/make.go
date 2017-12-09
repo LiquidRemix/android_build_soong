@@ -100,8 +100,8 @@ func runMakeProductConfig(ctx Context, config Config) {
 
 	// Variables to print out in the top banner
 	bannerVars := []string{
-		"PLATFORM_VERSION_CODENAME",
 		"PLATFORM_VERSION",
+		"LIQUID_VERSION",
 		"TARGET_PRODUCT",
 		"TARGET_BUILD_VARIANT",
 		"TARGET_BUILD_TYPE",
@@ -112,20 +112,8 @@ func runMakeProductConfig(ctx Context, config Config) {
 		"TARGET_2ND_ARCH",
 		"TARGET_2ND_ARCH_VARIANT",
 		"TARGET_2ND_CPU_VARIANT",
-		"HOST_ARCH",
-		"HOST_2ND_ARCH",
-		"HOST_OS",
-		"HOST_OS_EXTRA",
-		"HOST_CROSS_OS",
-		"HOST_CROSS_ARCH",
-		"HOST_CROSS_2ND_ARCH",
-		"HOST_BUILD_TYPE",
-		"BUILD_ID",
-		"OUT_DIR",
-		"AUX_OS_VARIANT_LIST",
-		"TARGET_BUILD_PDK",
-		"PDK_FUSION_PLATFORM_ZIP",
-	}
+		"TARGET_USE_SDCLANG",
+    }
 
 	allVars := append(append([]string{
 		// Used to execute Kati and Ninja
