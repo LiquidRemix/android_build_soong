@@ -458,7 +458,8 @@ func (ctx *moduleContextImpl) isVndkSp() bool {
 
 // Create source abi dumps if the module belongs to the list of VndkLibraries.
 func (ctx *moduleContextImpl) createVndkSourceAbiDump() bool {
-	return ctx.ctx.Device() && (ctx.mod.isVndk() || inList(ctx.baseModuleName(), llndkLibraries))
+	skipAbiChecks := ctx.ctx.AConfig().IsEnvTrue("SKIP_ABI_CHECKS")
+	return !skipAbiChecks && ctx.ctx.Device() && (ctx.mod.isVndk() || inList(ctx.baseModuleName(), llndkLibraries))
 }
 
 func (ctx *moduleContextImpl) selectedStl() string {
