@@ -96,6 +96,9 @@ func runMakeProductConfig(ctx Context, config Config) {
 		"CCACHE_SLOPPINESS",
 		"CCACHE_BASEDIR",
 		"CCACHE_CPP2",
+
+		// skip abi checks
+		"SKIP_ABI_CHECKS",
 	}
 
 	// Variables to print out in the top banner
