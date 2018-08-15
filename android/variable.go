@@ -117,8 +117,13 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
+		Additional_gralloc_10_usage_bits struct {
+		        Cppflags []string
+	    }
+
 		// include Lineage variables
 		Lineage android.Product_variables
+
 	} `android:"arch_variant"`
 }
 
@@ -235,6 +240,8 @@ type productVariables struct {
 	PgoAdditionalProfileDirs []string `json:",omitempty"`
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
+
+	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 
 	// include Lineage variables
 	Lineage android.ProductVariables
